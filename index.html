@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* Body Styling */
+    body {
+      color: #333;
+      background-color: #1e1e2f;
+      scroll-behavior: smooth;
+    }
+
+    /* Header */
+    header {
+      background: #0f4c75;
+      color: #fff;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      font-weight: bold;
+      transition: transform 0.3s ease;
+    }
+
+    header h1:hover {
+      transform: scale(1.05);
+      color: #3282b8;
+    }
+
+    /* Container */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 30px auto;
+    }
+
+    /* Section Styling */
+    section {
+      margin: 40px 0;
+      padding: 25px;
+      background: #0f3057;
+      border-radius: 8px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Profile Photo */
+    .profile-photo {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .profile-photo img {
+      width: 150px;
+      height: 200px;
+      border-radius: 50%;
+      border: 4px solid #bbe1fa;
+    }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+.about {
+  text-align: center;
+  color: #bbe1fa;
+  font-family: 'Poppins', sans-serif;
+}
+
+.about h2 {
+  font-size: 2.5em;
+  font-weight: 600;
+  margin-top: 10px;
+  letter-spacing: 1px;
+  color: #e8f0fe;
+}
+
+.about p {
+  font-size: 1.2em;
+  font-weight: 300;
+  margin-top: 15px;
+  color: #ffffff;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+}
+
+
+    /* Experience & Education Sections */
+    .experience, .education {
+      color: #bbe1fa;
+      line-height: 1.6;
+    }
+
+    p {
+      color: white
+    }
+    /* Skills Section */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 15px;
+      color: #bbe1fa;
+    }
+
+    .skill {
+      padding: 10px;
+      text-align: center;
+      background-color: #3282b8;
+      border-radius: 8px;
+      color: #fff;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .skill:hover {
+      background-color: #bbe1fa;
+      color: #1e1e2f;
+      transform: scale(1.1);
+    }
+
+    /* Projects Section */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 15px;
+      color: #bbe1fa;
+    }
+
+    .project-card {
+      background-color: #1b262c;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+
+    .project-card h3 {
+      font-size: 1.3em;
+      color: #bbe1fa;
+      margin: 10px 0;
+    }
+
+    /* Resume Section */
+    .resume {
+      text-align: center;
+      color: #bbe1fa;
+    }
+
+    .resume h2 {
+  margin-bottom: 10px; 
+}
+
+.resume a {
+      margin-top: 10px; 
+      color: #3282b8;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      padding: 10px 20px;
+      background-color: #0f4c75;
+      border-radius: 8px;
+      margin-top: 10px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .resume a:hover {
+      background-color: #bbe1fa;
+      color: #1e1e2f;
+    }
+
+    /* Contact Section */
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact input, .contact textarea {
+      padding: 12px;
+      border: 2px solid #3282b8;
+      border-radius: 5px;
+      background: #1b262c;
+      color: #bbe1fa;
+      transition: border-color 0.3s ease;
+    }
+
+    .contact input:focus, .contact textarea:focus {
+      border-color: #bbe1fa;
+    }
+
+    .contact button {
+      padding: 12px;
+      background-color: #3282b8;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background 0.3s ease;
+    }
+
+    .contact button:hover {
+      background-color: #bbe1fa;
+      color: #1e1e2f;
+    }
+    .contact, h2{
+      color: #bbe1fa;
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1>My Portfolio</h1>
+  </header>
+
+  <!-- Profile Photo Section -->
+  <div class="profile-photo">
+    <img src="images/myself.jpg" alt="Your Profile Photo">
+  </div>
+
+  <!-- About Me Section -->
+  <div class="container">
+    <section class="about">
+      <h2>Hello, I'm Shabnam Khan</h2>
+      <p>Recent graduate with a Post Graduate Diploma in Computer Application and a strong foundation in software engineering principles. Proficient in HTML and CSS with practical experience in developing web applications through hands-on projects. Demonstrated leadership and collaboration skills through roles in student councils and academic support positions.</p>
+    </section>
+
+    <!-- Experience Section -->
+       <!-- Experience Section -->
+       <section class="experience">
+        <h2>Experience</h2>
+        <div>
+          <h3>NavGurukul Foundation For Social Welfare</h3>
+          <p><strong>Role:</strong> Placement Specialist</p>
+          <p><strong>Year:</strong> 2024</p>
+          <p><strong>Location:</strong> Dantewada</p>
+        </div>
+        <hr>
+        <div>
+          <h3>NavGurukul Foundation For Social Welfare</h3>
+          <p><strong>Role:</strong> Academic Associate</p>
+          <p><strong>Year:</strong> 2024</p>
+          <p><strong>Location:</strong> Dantewada</p>
+          <p>Managed and supported academic growth of 30 students, developed plans for academic improvement, and fostered a positive learning environment.</p>
+        </div>
+        <hr>
+        <div>
+          <h3>NavGurukul Foundation For Social Welfare</h3>
+          <p><strong>Role:</strong> Workout Coordinator (Student Council)</p>
+          <p><strong>Year:</strong> 2023</p>
+          <p><strong>Location:</strong> Dantewada</p>
+          <p>Led a group of over 60 students, resolving issues and encouraging collaboration. Enhanced communication skills and team coordination abilities.</p>
+        </div>
+      </section>
+  
+      <!-- Education Section -->
+      <section class="education">
+        <h2>Education</h2>
+        <div>
+          <h3>NavGurukul Foundation for Social Welfare</h3>
+          <p><strong>Institute:</strong> Software Engineering Diploma Course</p>
+          <p><strong>Year:</strong> Aug2023 - 2024</p>
+          <p><strong>Location:</strong> Chhattisgarh</p>
+        </div>
+        <hr>
+        <div>
+          <h3>Dr. C.V. Raman University</h3>
+          <p><strong>Institute</strong> Post Graduate Diploma in Computer Applications</p>
+          <p><strong>Years:</strong> 2022-2023</p>
+          <p><strong>Location:</strong> Bilaspur, Chhattisgarh</p>
+        </div>
+        <hr>
+        <div>
+          <h3>Pt. Sundarlal Sharma University Chhattisgarh</h3>
+          <p><strong>Institute:</strong> Bachelor of Science</p>
+          <p><strong>Years:</strong> 2020-2022</p>
+          <p><strong>Location:</strong> Dantewada</p>
+        </div>
+      </section>
+  
+    <!-- Technical Skills Section -->
+    <section class="skills">
+      <h2>Technical Skills</h2>
+      <div class="skill">JavaScript</div>
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">MS WORD</div>
+      <div class="skill">MS EXCEL</div>
+    </section>
+
+    <!-- Soft Skills Section -->
+    <section class="skills">
+      <h2>Soft Skills</h2>
+      <div class="skill">Communication</div>
+      <div class="skill">Teamwork</div>
+      <div class="skill">Problem-solving</div>
+      <div class="skill">Leadership</div>
+      <div class="skill">Time Management</div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects">
+      <h2>Projects</h2>
+      
+      <div class="project-card">
+        <img src="images/image.png" alt="Project 1">
+        <h3>Image Gallery</h3>
+        <p>Developed an interactive image gallery using HTML, CSS, and JavaScript featuring a grid layout, clickable thumbnails, and full-screen lightbox effect.</p>
+        <a href="https://image-gallery-shabnam.netlify.app/" target="_blank">View here</a>
+      </div>
+      
+      <div class="project-card">
+        <img src="images/weather.png" alt="Project 2">
+        <h3>Weather App</h3>
+        <p>Built a responsive weather app integrating a weather API, providing real-time weather data for any location.</p>
+        <a href="https://weather-app-shabnam.netlify.app/" target="_blank">View here</a>
+      </div> 
+      
+      <div class="project-card">
+        <img src="images/game.png" alt="Project 3">
+        <h3>Memory Game</h3>
+        <p>Created a memory game using HTML, CSS, and JavaScript, implementing dynamic gameplay and visual effects.</p>
+        <a href="https://github.com/yourusername/memory-game" target="_blank">View here</a>
+      </div>
+      
+      <div class="project-card">
+        <img src="images/spotify.png" alt="Project 4">
+        <h3>Spotify Clone</h3>
+        <p>Created a Spotify clone with functional playback features, developed as part of a hackathon. Showcased advanced CSS and JavaScript skills.</p>
+        <a href="https://github.com/yourusername/spotify-clone" target="_blank">View here</a>
+      </div>
+      
+    </section>
+    
+
+    <!-- Resume Section -->
+    <section class="resume">
+      <h2>Resume</h2>
+      <a href="https://drive.google.com/file/d/12tk0TZdEKgCGJWbFhz6guiPu5WzgwWq3/view?usp=sharing" target="_blank">Resume Link</a>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+      <h2>Contact</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+  </div>
+
+</body>
+</html>
